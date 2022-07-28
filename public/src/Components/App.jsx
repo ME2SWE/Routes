@@ -4,13 +4,13 @@ import ResultsList from './ResultsList.jsx';
 import Search from './Search.jsx';
 
 const App = () => {
-  cont data = [
+  const data = [
     {name: 'Jaws', year: 1985},
     {name: 'Twilight', year: 2008},
     {name: 'Titanic', year: 1998},
     {name: 'Lord of the Rings', year: 2001}
-  ]
-  const [shows, setShows] = useState([]);
+  ];
+  const [shows, setShows] = useState(data);
 
 
   return (
@@ -19,7 +19,7 @@ const App = () => {
         <h1 className="heading">TV GUIDE</h1>
         <Search />
       </div>
-      <ResultsList />
+      <ResultsList shows={shows} type='movies'/>
     </div>
   )
 }
