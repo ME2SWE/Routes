@@ -11,13 +11,30 @@ const App = () => {
     {name: 'Lord of the Rings', year: 2001}
   ];
   const [shows, setShows] = useState(data);
+  const [type, setType] = useState([]);
+
+  // useEffect(() => {
+  //   if (shows.length) console.log(shows)
+  // }, [shows]);
+
+  const getShows = (name) => {
+    // @PATH (`/shows/${name})
+
+  }
+
+  const getMovies = (name) => {
+
+  }
 
 
   return (
     <div id="page">
       <div id="search-container">
         <h1 className="heading">TV GUIDE</h1>
-        <Search />
+        <Search
+          searchShows={getShows}
+          searchMovies={getMovies}
+        />
       </div>
       <ResultsList shows={shows} type='movies'/>
     </div>
