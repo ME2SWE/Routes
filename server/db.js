@@ -35,8 +35,6 @@ const MovieSchema = new Schema({
 let Show = mongoose.model('Show', ShowSchema);
 let Movie = mongoose.model('Movie', MovieSchema);
 
-// @desc    Save shows
-//@route    POST /shows
 const addShow = async(data) => {
   try{
     const {name, year} = data;
@@ -46,8 +44,6 @@ const addShow = async(data) => {
   }
 }
 
-// @desc    Save movies
-//@route    POST /movies
 const addMovie = async(data) => {
   try{
     const {name, year} = data;
