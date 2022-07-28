@@ -1,7 +1,7 @@
-let nameButton = document.querySelector('#search-name');
-let name = document.querySelector('#name');
-let genreButton = document.querySelector('#search-genre');
-let genre = document.querySelector('#genre');
+let showButton = document.querySelector('#search-shows');
+let shows = document.querySelector('#shows');
+let moviesButton = document.querySelector('#search-movies');
+let movies = document.querySelector('#movies');
 let list = document.querySelector('#list');
 
 let search = (el) => {
@@ -11,26 +11,26 @@ let search = (el) => {
     if (el.value === 'clear') {
       list.innerHTML = '';
     } else {
-      let show = document.createElement('LI');
-      show.append(el.value);
-      list.append(show);
+      let name = document.createElement('LI');
+      name.append(el.value);
+      list.append(name);
     }
     el.value = '';
   }
 }
 
-nameButton.addEventListener('click', () => search(name));
-name.addEventListener('keypress', (e) => {
+showButton.addEventListener('click', () => search(shows));
+shows.addEventListener('keypress', (e) => {
   if (event.key === 'Enter') {
     e.preventDefault();
-    search(name);
+    search(show);
   }
 })
 
-genreButton.addEventListener('click', () => search(genre));
-genre.addEventListener('keypress', (e) => {
+moviesButton.addEventListener('click', () => search(movies));
+movies.addEventListener('keypress', (e) => {
   if (event.key === 'Enter') {
     e.preventDefault();
-    search(genre);
+    search(movies);
   }
 })

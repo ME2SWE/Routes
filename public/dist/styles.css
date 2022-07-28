@@ -37,7 +37,7 @@ body {
   /* border: 1px solid gray; */
 }
 
-#name {
+#shows {
   margin-top: 70px;
 }
 
@@ -59,8 +59,7 @@ body {
 }
 
 input {
-  font-size: 14px;
-  font-size: max(16px, 1em);
+  font-size: 16px;
   font-family: inherit;
   padding: 0.2em 0.5em;
   background-color: #fff;
@@ -99,7 +98,6 @@ button {
   ul {
     margin: 0 auto;
     list-style-type: none;
-    /* padding: 25px; */
     width: 60%;
     height: 43%;
     background-color: white;
@@ -109,13 +107,26 @@ button {
 
   li {
     margin: 5px auto;
-    padding: 0.5em 1.5em;
-    font-size: max(16px, 1em);
+    padding: 0.4em 1em 0.4em 1.2em;
     font-family: inherit;
-    line-height: 2em;
     width: 85%;
     height: 10%;
     background-color: rgba(6, 147, 248, 0.132);
     border:0.5px solid #BBBBBB;
     border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .title {
+    font-size: larger;
+  }
+
+  .year {
+    font-size: smaller;
+  }
+
+  .save {
+    position: relative;
+    float: right;
+
   }
