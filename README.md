@@ -15,4 +15,7 @@ Build the webpack bundle by running 'npm run build'
 In a separate teminal window, start the server by running 'npm start'
 
 ### Files that you dont need
-index.js and index2.html were from my original vanilla js version. They are not necessary with the current react version
+public/src/index.js
+public/dist/index2.html
+
+These files were from my original vanilla js version. They are not necessary with the current react version
