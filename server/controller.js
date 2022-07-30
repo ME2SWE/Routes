@@ -7,7 +7,9 @@ const {Show, Movie, addShow, addMovie} = require('./db')
 // @desc    Get shows
 //@route    GET /shows/:name
 exports.getShows = (req, res, next) => {
-
+  axios.get(`https://api.tvmaze.com/search/shows?q=${req.params.name}`)
+  .then(data => res.send(data.data))
+  .catch(err => res.status(404))
 }
 
 // @desc    Get movies

@@ -1,11 +1,9 @@
 const express = require('express');
 const router = express.Router();
-// const {
+const {getShows} = require('./controller');
 
-// } = require('./controller');
-
-// router.route('/shows/:name')
-//   .get(getShows)
+router.route('/shows/:name')
+  .get(getShows)
 
 // router.route('/shows')
 //   .post(saveShow)
