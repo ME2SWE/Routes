@@ -11,7 +11,7 @@ const App = () => {
     {name: 'Lord of the Rings', year: 2001}
   ];
   const [shows, setShows] = useState([]);
-  const [type, setType] = useState([]);
+  const [type, setType] = useState('');
 
   // useEffect(() => {
   //   if (shows.length) console.log(shows)
@@ -22,8 +22,9 @@ const App = () => {
     axios.get(`/shows/${name}`)
     //data.data
     .then(data => {
-      // console.log('data', data)
+      setType('shows');
       setShows(data.data)})
+
     .catch(err => console.log('ERROR', err))
   }
 
@@ -41,7 +42,7 @@ const App = () => {
           searchMovies={getMovies}
         />
       </div>
-      <ResultsList shows={shows} type='movies'/>
+      <ResultsList shows={shows} type={type}/>
     </div>
   )
 }

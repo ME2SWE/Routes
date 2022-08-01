@@ -17,9 +17,7 @@ app.use( express.static(path.join(__dirname, '../public/dist')));
 app.get('/shows/:name', (req, res) => {
   // getShows();
   axios.get(`https://api.tvmaze.com/search/shows?q=${req.params.name}`)
-  .then(data =>{
-    console.log(data.data)
-    res.send(data.data)})
+  .then(data => res.send(data.data))
   .catch(err => res.status(404))
 })
 

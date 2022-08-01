@@ -2,8 +2,7 @@ import react, {useState, useEffect} from 'react';
 import { IoSaveOutline } from "react-icons/io5";
 
 const ListItem = (props) => {
-  console.log(props)
-  let title = props.type == 'movies' ? props.show.name : props.show.show.name;
+  let title = props.type === 'movies' ? props.show.name : props.show.show.name;
   let year = props.type === 'movies' ? props.show.year :
       props.show.show.premiered ? props.show.show.premiered.slice(0,4) : null;
 
