@@ -5,7 +5,7 @@ import Search from './Search.jsx';
 
 const App = () => {
   const [shows, setShows] = useState([]);
-  const [type, setType] = useState([]);
+  const [type, setType] = useState();
 
   // useEffect(() => {
   //   if (shows.length) console.log(shows)
