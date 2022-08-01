@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 import ResultsList from './ResultsList.jsx';
 import Search from './Search.jsx';
 
@@ -10,7 +10,7 @@ const App = () => {
     {name: 'Titanic', year: 1998},
     {name: 'Lord of the Rings', year: 2001}
   ];
-  const [shows, setShows] = useState([]);
+  const [shows, setShows] = useState(data);
   const [type, setType] = useState('');
 
   // useEffect(() => {
@@ -19,19 +19,13 @@ const App = () => {
 
   const getShows = (name) => {
     // @PATH (`/shows/${name})
-    axios.get(`/shows/${name}`)
-    //data.data
-    .then(data => {
-      setType('shows');
-      setShows(data.data)})
 
-    .catch(err => console.log('ERROR', err))
   }
 
   const getMovies = (name) => {
+    // @PATH (`/movies`)
 
   }
-
 
   return (
     <div id="page">
@@ -42,7 +36,7 @@ const App = () => {
           searchMovies={getMovies}
         />
       </div>
-      <ResultsList shows={shows} type={type}/>
+      <ResultsList shows={shows} type='movies'/>
     </div>
   )
 }

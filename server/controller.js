@@ -6,14 +6,14 @@ const {Show, Movie, addShow, addMovie} = require('./db')
 
 // @desc    Get shows
 //@route    GET /shows/:name
+//@API url     `https://api.tvmaze.com/search/shows?q=${}`;
 exports.getShows = (req, res, next) => {
-  axios.get(`https://api.tvmaze.com/search/shows?q=${req.params.name}`)
-  .then(data => res.send(data.data))
-  .catch(err => res.status(404))
+
 }
 
 // @desc    Get movies
 //@route    GET /movies
+//@API url  `https://api.watchmode.com/v1/search/?apiKey=${key}&search_field=name&search_value=${}`;
 exports.getMovies = (req, res, next) => {
 
 }
