@@ -16,7 +16,9 @@ In a separate teminal window, start the server by running 'npm start'
 ### Branches
 The 'main' branch is fully functioning, but static, version of the app.
 
-The 'dev' branch is the solution code of the fully functioning, dynamic version of the app.
+The 'dev' branch is the solution code of the fully functioning, dynamic version of the app that retrieves data from the APIs.
+
+Note: Although the database is functional, the 'dev' branch does not have POST routes built out.
 
 ### Building out the solution in the Main branch
 To replace the static data with dynamic data from the APIs, first write your GET requests in App.jsx to the server, and then use your server to handle the requests by getting data from the APIs.
@@ -24,6 +26,8 @@ To replace the static data with dynamic data from the APIs, first write your GET
 Once your request functions are returning data to App.jsx, change the prop.type that is being passed to the ResultsList component from the hardcoded 'movies' string to the App.jsx state 'type' variable.
 
 You will then have to set the App.jsx state 'shows' and 'type' variables in your request function once your data is received.
+
+There is also a prebuilt mongoose file for a Mongodb database. This database is ready to recieve data. You can write an event handler for the 'save' icon in each ListItem and write requests from App.jsx to post movies and shows to the database upon clicking the icon.
 
 ### APIs
 We are using two APIs, TvMaze and WatchMode in an effort to demonstrate how request requirements and return data varies among APIs.
