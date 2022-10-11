@@ -34,7 +34,8 @@ exports.getMovies = (req, res, next) => {
 exports.saveShow = async(req, res, next) => {
   try{
     const {name, year} = req.body;
-    const show = await Show.Create({name, year});
+    const show = await Show.create({name, year});
+    res.status(201).send('Show saved')
   } catch (err) {
     res.status(400).json({ success: false, msg: err.message });
   }
@@ -44,8 +45,10 @@ exports.saveShow = async(req, res, next) => {
 //@route    POST /movies
 exports.saveMovie = async(req, res, next) => {
   try{
+    console.log(req.body)
     const {name, year} = req.body;
-    const movie = await Movie.Create({name, year});
+    const movie = await Movie.create({name, year});
+    res.status(201).send('Movie saved')
   } catch (err) {
     res.status(400).json({ success: false, msg: err.message });
   }

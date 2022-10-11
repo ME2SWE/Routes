@@ -1,3 +1,5 @@
+//These functions were used to seed the database
+
 const {Show, Movie, addShow, addMovie} = require('./db')
 
 const populateShows = async(shows, func) => {
@@ -9,7 +11,6 @@ const populateShows = async(shows, func) => {
     await func(obj);
   }
 }
-
 
 const populateMovies = async(movies, func) => {
   for (let i = 0; i < shows.length; i++) {

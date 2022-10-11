@@ -25,8 +25,7 @@ const Search = (props) => {
         />
         <button
           id="search-shows"
-          onClick={(e) => handleClick(e, props.searchShows, show, 'shows')}
-        >
+          onClick={(e) => handleClick(e, props.searchShows, show, 'shows')}>
           Find
         </button>
       </form>
@@ -39,8 +38,8 @@ const Search = (props) => {
         />
         <button
           id="search-movies"
-          onClick={(e) => handleClick(e, props.searchMovies, movie, 'movies')}
-        >Find
+          onClick={(e) => handleClick(e, props.searchMovies, movie, 'movies')}>
+          Find
         </button>
       </form>
     </Fragment>

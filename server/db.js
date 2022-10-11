@@ -8,14 +8,14 @@ const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'mongo connection error'));
 
-const baseSchema = {
-  name: {
-    type: String,
-    required: true
-  },
-  year: Number,
-  desc: String
-};
+// const baseSchema = {
+//   name: {
+//     type: String,
+//     required: true
+//   },
+//   year: Number,
+//   desc: String
+// };
 
 const ShowSchema = new Schema({
   name: {
