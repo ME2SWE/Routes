@@ -14,6 +14,8 @@ Build the webpack bundle by running 'npm run build'
 
 In a separate terminal window, start the server by running 'npm start'
 
+You can view the app in the browser at http://localhost:8080
+
 ### Branches
 The 'main' branch is a fully functioning, but static, version of the app.
 
