@@ -7,9 +7,15 @@ const axios = require('axios');
 const fetch = require('node-fetch');
 const routes = require('./routes');
 
-//parses req data
+
+// Add app-wide middleware
+  //parses req data
 app.use(express.json());
+
+// Set up static service of assets
 app.use( express.static(path.join(__dirname, '../public/dist')));
+
+// Define routes
 app.use(routes);
 
 // app.get('/shows/:name', (req, res) => {
